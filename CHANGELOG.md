@@ -2,7 +2,41 @@
 # 🚀Changelog
 
 -------------------------------------------------------------------------------------------------------------
+# 5.8.16 (2023-03-26)
 
+### 🐣新特性
+* 【core  】      改进Calculator.conversion，兼容乘法符号省略写法（issue#2964@Github）
+* 【core  】      改进XmlUtil.xmlToBean，支持xml转bean时父节点忽略大小写
+* 【core  】      优化ArrayUtil的空判断（pr#2969@Github）
+* 【extra 】      优化SpringUtil在非Spring环境下的异常（issue#2835@Github）
+* 【core  】      StrUtil增加commonPrefix和commonSuffix方法（pr#3007@Github）
+* 【core  】      NumberUtil增加重载parseXXX方法, 解析失败返回默认值（pr#3007@Github）
+* 【core  】      FileUtil增加readLines重载，支持filter（pr#3006@Github）
+* 【json  】      当用户选择ignoreError时，错误对象转JSON也忽略
+
+### 🐞Bug修复
+* 【crypto】      修复NoSuchMethodError未捕获问题（issue#2966@Github）
+* 【poi   】      修复SXSSFWorkbook调用setComment时错位的问题（issue#I6MBS5@Gitee）
+* 【core  】      修复BeanUtil.hasGetter没有跳过getClass方法的问题（issue#I6MBS5@Gitee）
+* 【core  】      修复FileMagicNumber长度判断问题导致的越界异常（issue#I6MACI@Gitee）
+* 【core  】      修复DateUtil针对ISO8601时间格式部分场景下的解析存在问题（issue#2981@Github）
+* 【core  】      修复JSONUtil.toBean可能的空指针问题（issue#2987@Github）
+* 【core  】      修复CalendarUtil.isSameMonth没有判断公元前导致不一致的问题（issue#3011@Github）
+* 【core  】      修复WatchUtil createModify maxDepth传递后没有使用问题（issue#3005@Github）
+* 【core  】      修复NullComparator反转无效问题（pr#964@Gitee）
+* 【setting】     修复props.toBean 数组字段未赋值问题（issue#3008@Github）
+
+-------------------------------------------------------------------------------------------------------------
+# 5.8.15 (2023-03-09)
+
+### 🐣新特性
+* 【http  】      新增followRedirectsCookie配置，支持开启自动重定向携带cookie（pr#2961@Github）
+
+### 🐞Bug修复
+* 【all   】      修复Automatic-Module-Name错误问题（issue#2952@Github）
+* 【core  】      修复NumberWithFormat导致转换Long异常问题（issue#I6L2LO@Gitee）
+
+-------------------------------------------------------------------------------------------------------------
 # 5.8.14 (2023-03-05)
 
 ### 🐣新特性
@@ -30,7 +64,7 @@
 * 【core  】      修复StrUtil.split切分长度为0时的bug（pr#944@Gitee）
 * 【core  】      修复ReUtil.delAll方法当 content 仅为空格时的问题（issue#I6GIMT@Gitee）
 * 【core  】      修复ReUtil.delAll方法当 content 仅为空格时的问题（issue#I6GIMT@Gitee）
-* 【core  】      修复Tailer文件内容跟随在调用stop后，文件依旧被占用问题（issue#I6GFD2@Gitee）
+* 【core  】      修复文件内容跟随在调用stop后，文件依旧被占用问题（issue#I6GFD2@Gitee）
 * 【core  】      修复ReflectUtil.invokeRaw方法中参数类型转换动作未生效的问题（pr#2912@Github）
 * 【core  】      修复isXXX转换时的匹配问题（issue#I6H0XF@Gitee）
 * 【core  】      修复MutableObj.equals空指针问题
@@ -419,7 +453,7 @@
 * 【core   】     修复SimpleCache线程安全问题
 * 【core   】     修复ClassLoaderUtil中可能的关联ClassLoader错位问题
 * 【extra  】     修复Sftp错误内容解析大小写问题（issue#I53GPI@Gitee）
-* 【core   】     修复Tailer当文件内容为空时，会报异常问题（pr#602@Gitee）
+* 【core   】     修复当文件内容为空时，会报异常问题（pr#602@Gitee）
 
 -------------------------------------------------------------------------------------------------------------
 
